@@ -59,6 +59,13 @@ public class FaceDetectService implements Serializable {
         return "";
     }
 
+    @GET
+    @Path("/kill")
+    public void kill() {
+        System.out.println("Bye");
+        System.exit(1);
+    }
+
     /*
         対応ォーマット： JPEG, PNG, GIF(最初のフレーム), BMP
         画像サイズ： 4MB 以下
